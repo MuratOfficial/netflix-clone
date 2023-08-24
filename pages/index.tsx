@@ -7,6 +7,8 @@ import { Inter } from 'next/font/google';
 import useMovieList from '@/hooks/useMovieList';
 import useFavorites from '@/hooks/useFavorites';
 import MovieList from '@/components/MovieList';
+import InfoModal from '@/components/InfoModal';
+import useInfoModalStore from '@/hooks/useInfoModal';
 
 
 export async function getServerSideProps(context: NextPageContext) {
@@ -32,9 +34,11 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   const { data: movies = [] } = useMovieList();
   const { data: favorites = [] } = useFavorites();
+  const {isOpen, closeModal} = useInfoModalStore();
 
   return (
     <div>
+      <InfoModal visible={isOpen} onClose={closeModal}/>
       <Navbar />
       <Billboard />
       <div className="pb-40">

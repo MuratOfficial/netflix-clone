@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { BsChevronDown } from 'react-icons/bs';
 import { BsPlay } from 'react-icons/bs';
 import FavoriteButton from './FavoriteButton';
+import useInfoModalStore from '@/hooks/useInfoModal';
 
 
 interface MovieCardProps {
@@ -11,6 +12,7 @@ interface MovieCardProps {
 
 const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
   const router = useRouter();
+  const {openModal} = useInfoModalStore();
 
   const redirectToWatch = useCallback(() => router.push(`/watch/${data.id}`), [router, data.id]);
 
@@ -72,7 +74,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
               <BsPlay className="text-black w-4 lg:w-6" />
             </div>
             <FavoriteButton movieId={data.id} />
-            <div onClick={() => {}} className="cursor-pointer ml-auto group/item w-6 h-6 lg:w-10 lg:h-10 border-white border-2 rounded-full flex justify-center items-center transition hover:border-neutral-300">
+            <div onClick={()=>openModal(data?.id)} className="cursor-pointer ml-auto group/item w-6 h-6 lg:w-10 lg:h-10 border-white border-2 rounded-full flex justify-center items-center transition hover:border-neutral-300">
               <BsChevronDown className="text-white group-hover/item:text-neutral-300 w-4 lg:w-6" />
             </div>
           </div>
