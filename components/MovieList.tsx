@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MovieCard from '@/components/MovieCard';
+import MovieCard from '../components/MovieCard';
 import { isEmpty } from 'lodash';
 
 interface MovieListProps {

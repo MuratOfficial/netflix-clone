@@ -1,5 +1,5 @@
 
-import Input from "@/components/Input";
+import Input from "../components/Input";
 import { useCallback, useState } from "react";
 import axios from "axios";
 import {signIn} from 'next-auth/react';

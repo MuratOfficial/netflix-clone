@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { BsChevronDown } from 'react-icons/bs';
 import { BsPlay } from 'react-icons/bs';
 import FavoriteButton from './FavoriteButton';
-import useInfoModalStore from '@/hooks/useInfoModal';
+import useInfoModalStore from '../hooks/useInfoModal';
 
 
 interface MovieCardProps {

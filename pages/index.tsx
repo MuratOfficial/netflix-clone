@@ -1,14 +1,14 @@
 
-import Billboard from '@/components/Billboard';
-import Navbar from '@/components/Navbar';
+import Billboard from '../components/Billboard';
+import Navbar from '../components/Navbar';
 import { NextPageContext } from 'next';
 import { getSession, signOut } from 'next-auth/react';
 import { Inter } from 'next/font/google';
-import useMovieList from '@/hooks/useMovieList';
-import useFavorites from '@/hooks/useFavorites';
-import MovieList from '@/components/MovieList';
-import InfoModal from '@/components/InfoModal';
-import useInfoModalStore from '@/hooks/useInfoModal';
+import useMovieList from '../hooks/useMovieList';
+import useFavorites from '../hooks/useFavorites';
+import MovieList from '../components/MovieList';
+import InfoModal from '../components/InfoModal';
+import useInfoModalStore from '../hooks/useInfoModal';
 
 
 export async function getServerSideProps(context: NextPageContext) {
