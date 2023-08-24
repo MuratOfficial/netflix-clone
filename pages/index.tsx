@@ -1,8 +1,12 @@
 
-import useCurrentUser from '@/hooks/useCurrentUser';
+import Billboard from '@/components/Billboard';
+import Navbar from '@/components/Navbar';
 import { NextPageContext } from 'next';
 import { getSession, signOut } from 'next-auth/react';
 import { Inter } from 'next/font/google';
+import useMovieList from '@/hooks/useMovieList';
+import useFavorites from '@/hooks/useFavorites';
+import MovieList from '@/components/MovieList';
 
 
 export async function getServerSideProps(context: NextPageContext) {
@@ -26,14 +30,17 @@ return {
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  
-  const {data:user} = useCurrentUser();
+  const { data: movies = [] } = useMovieList();
+  const { data: favorites = [] } = useFavorites();
 
   return (
     <div>
-<h1 className='text-2xl text-green-500'>Netflix Clone</h1>
-<p className=' text-white'>Logged in as {user?.email}</p>
-<button className='f-10 w-16 bg-slate-400 ' onClick={()=>signOut()}>Log out</button>
+      <Navbar />
+      <Billboard />
+      <div className="pb-40">
+        <MovieList title="Trending Now" data={movies} />
+        <MovieList title="My List" data={favorites} />
+      </div>
     </div>
     
   )
