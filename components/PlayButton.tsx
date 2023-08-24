@@ -1,6 +1,6 @@
+import { useRouter } from 'next/router';
 import React from 'react';
 import { BsPlay } from 'react-icons/bs';
-import { useRouter } from 'next/router';
 
 interface PlayButtonProps {
   movieId: string;

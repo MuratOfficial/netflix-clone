@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 
-import PlayButton from '../components/PlayButton';
 import FavoriteButton from '../components/FavoriteButton';
+import PlayButton from '../components/PlayButton';
 import useInfoModalStore from '../hooks/useInfoModal';
 import useMovie from '../hooks/useMovie';
 

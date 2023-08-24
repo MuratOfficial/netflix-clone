@@ -1,10 +1,9 @@
-import React, { useCallback } from 'react';
 import { useRouter } from 'next/router';
-import { BsChevronDown } from 'react-icons/bs';
-import { BsPlay } from 'react-icons/bs';
-import FavoriteButton from './FavoriteButton';
-import useInfoModalStore from '../hooks/useInfoModal';
+import React, { useCallback } from 'react';
+import { BsChevronDown, BsPlay } from 'react-icons/bs';
 
+import useInfoModalStore from '../hooks/useInfoModal';
+import FavoriteButton from './FavoriteButton';
 
 interface MovieCardProps {
   data: any,

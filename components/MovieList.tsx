@@ -1,7 +1,7 @@
+import { isEmpty } from 'lodash';
 import React from 'react';
 
 import MovieCard from '../components/MovieCard';
-import { isEmpty } from 'lodash';
 
 interface MovieListProps {
     data: Record <string, any>;
