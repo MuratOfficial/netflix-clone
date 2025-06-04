@@ -1,38 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">🎬 Netflix Clone</h1>
+<p align="center">
+  A sleek Netflix-inspired movie streaming UI built as a pet project to explore frontend design, API integration, and modern React development.
+</p>
 
-## Getting Started
+<p align="center">
+  <img src="https://img.shields.io/github/languages/top/MuratOfficial/netflix-clone?style=flat-square" />
+  <img src="https://img.shields.io/github/license/MuratOfficial/netflix-clone?style=flat-square" />
+  <img src="https://img.shields.io/github/stars/MuratOfficial/netflix-clone?style=flat-square" />
+</p>
 
-First, run the development server:
+---
+
+## 🚀 About the Project
+
+This **Netflix Clone** is a pet project designed to replicate the UI/UX of Netflix using React. It fetches movie data from a public movie API (like TMDB) and displays categories such as Trending, Top Rated, and Originals. This project was built to improve frontend development skills, work with external APIs, and understand responsive layout design.
+
+---
+
+## 🧰 Tech Stack
+
+- **Language**: JavaScript (ES6+)
+- **Frontend**: React
+- **Styling**: CSS / Styled Components
+- **Data**: The Movie Database API (TMDB)
+- **Deployment**: (Optional) Vercel / Netlify
+
+---
+
+## ⚙️ Features
+
+- ✅ Movie browsing by categories (Trending, Top Rated, etc.)
+- ✅ Dynamic fetching from TMDB API
+- ✅ Hover effects and preview cards
+- ✅ Responsive design for desktop and mobile
+- ⏳ (Planned) Authentication with Firebase
+- ⏳ (Planned) Movie trailer playback
+- ⏳ (Planned) User profile and "My List" functionality
+
+---
+
+## 📦 Getting Started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+# 1. Clone the repository
+git clone https://github.com/MuratOfficial/netflix-clone.git
+cd netflix-clone
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the development server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+*App will be running at:*
+`📍 http://localhost:3000`
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 💡 You may need a TMDB API key. Create a .env file and add:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```env
+REACT_APP_TMDB_API_KEY=your_api_key_here
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 📌 Roadmap
+* Integrate Firebase for user auth and protected routes
+* Add "Continue Watching" and "My List"
+* Support for multiple user profiles
+* Trailer preview on hover
+* Deploy to Netlify or Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🤝 Contribution
+While this project is mainly for personal use, contributions and suggestions are welcome!
 
-## Learn More
+```bash
+# Fork the project
+# Create your feature branch
+git checkout -b feature/amazing-feature
 
-To learn more about Next.js, take a look at the following resources:
+# Commit your changes
+git commit -m "Add amazing feature"
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Push to the branch
+git push origin feature/amazing-feature
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Open a Pull Request
+```
 
-## Deploy on Vercel
+## 📄 License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p align="center"><b>Built with ❤️ by <a href="https://github.com/MuratOfficial">MuratOfficial</a></b></p>
